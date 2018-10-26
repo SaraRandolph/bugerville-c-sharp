@@ -5,35 +5,35 @@ using System.Collections.Generic;
 
 namespace Burgershack.Business
 {
-    public class DrinksService
+    public class BurgersService
     {
-        private readonly IDrinksRepo _repo;
+        private readonly IBurgersRepo _repo;
 
-        public DrinksService(IDrinksRepo repo)
+        public BurgersService(IBurgersRepo repo)
         {
             _repo = repo;
         }
 
-        public Drink GetById(int id)
+        public Burger GetById(int id)
         {
             //authenticate here maybe
             return _repo.GetById(id);
         }
 
-        public List<Drink> GetAll()
+        public List<Burger> GetAll()
         {
             return _repo.GetAll();
         }
 
-        public Drink UpdateDrink(Drink b)
+        public Burger UpdateBurger(Burger b)
         {
             //do some work
             return _repo.Update(b);
         }
 
-        public Drink Create(Drink drink)
+        public Burger Create(Burger burger)
         {
-            return _repo.Create(drink);
+            return _repo.Create(burger);
         }
     }
 }

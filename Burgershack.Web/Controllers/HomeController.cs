@@ -56,6 +56,11 @@ namespace Burgershack.Web.Controllers
             _bs = bs;
         }
 
+        public IActionResult Menu()
+        {
+            return View();
+        }
+
 
 
     }

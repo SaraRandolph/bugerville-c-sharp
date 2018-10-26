@@ -38,9 +38,13 @@ namespace Burgershack.Web
             services.AddTransient<IDbConnection>(x => null);
             //load repos
             services.AddTransient<IBurgersRepo, BurgersRepo>();
+            services.AddTransient<IDrinksRepo, DrinksRepo>();
+            services.AddTransient<ISidesRepo, SidesRepo>();
 
             //load services
             services.AddTransient<BurgersService>();
+            services.AddTransient<DrinksService>();
+            services.AddTransient<SidesService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
